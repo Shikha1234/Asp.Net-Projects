@@ -5,7 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace InterfaceDemo
-    class Institute 
+{ 
+   public class Institute 
     {
         public virtual void CourseOffered() 
         {
@@ -16,6 +17,8 @@ namespace InterfaceDemo
         {
             Console.WriteLine("Default discount : Rs 500/-");
         }
+
+        public abstract void Address();
     }
 
 
@@ -29,6 +32,8 @@ namespace InterfaceDemo
     {
         void PaperDetails();
     }
+
+
 
 
     class ShikhaTechnos : Institute, IBanners, IAds
@@ -48,8 +53,17 @@ namespace InterfaceDemo
         {
             Console.WriteLine("Papers Ads @ TOI, Danik Bhaskar");
         }
-    }
 
+        //Selaed class can not be inherited futher 
+
+    // Last class in the hierarchy of inheritance i.e. Sealed cant be inherited further.
+    //Selaed can inherited from other other objet can also been created 
+        public override void Address()
+        {
+
+
+        }
+    }
 
     class Demo 
     {
